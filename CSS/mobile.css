@@ -1,0 +1,185 @@
+/*MODALS*/
+.modal{
+  display: block;
+  position: fixed;
+  width: inherit;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;                        
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(120, 120, 120, 0.9);
+  opacity: 0;
+  -webkit-transition: opacity .5s linear;
+  -o-transition: opacity .5s linear;
+  transition: opacity .5s linear;                 
+}
+.modal.in{
+  opacity: 1;
+  z-index: 100;
+}
+.modal-container{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;  
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: -webkit-transform .5s ease-out;
+  -o-transition: -o-transform .5s ease-out;
+  transition: transform .5s ease-out;
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  background-color: #FFF;
+  opacity: 0;
+  z-index: 0;
+}
+.modal-container.in{
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);  
+  z-index: 1;  
+}
+.modal-header{
+    border: 0;
+    background: #005d7a;
+    padding: 1em 0;
+}
+.modal-header legend{
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-indent: 6.5%;
+}
+.modal-container.cart-management .modal-header legend{
+	font-size: 16px;
+}
+.close-container{
+	position: absolute;  
+	width: 10%;
+	height: 48px;
+	top: 0;
+	right: 4.3%;  	
+	background-image: url('../Images/Thumbnails/close.png');
+	background-size: 65%;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+.modal-body, .modal-footer{
+  padding: 20px 7.6%;
+} 
+.modal-footer{
+	padding-top: 0;
+}
+.modal-container ul{
+    padding: 0;
+    margin: 0;
+}   
+.modal-container input, .modal-container select{
+    width: 100%;
+    border: 1px solid #cac9b5;
+    letter-spacing: 0.1em;
+	padding-left: 0.4em;
+	padding-top: 0.4em;
+	padding-bottom: 0.5em;
+	margin-bottom: 1.5em;
+}
+.modal-container input[type=submit]{
+	background-color: transparent;
+	border: 1px solid #005d7a; 
+	border-radius: 2px;
+	color: #005d7a; 
+	cursor: pointer;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 100%;
+	-webkit-transition: background-color 1000ms ease;
+    -moz-transition: background-color 1000ms ease;
+    -o-transition: background-color 1000ms ease;
+    -ms-transition: background-color 1000ms ease;
+    transition: background-color 1000ms ease;
+}
+/*INFORMATION*/
+.modal-container.information, .modal-container.confirmation{
+    position: absolute;
+	top: 50%;    
+	transform: translateY(-50%); 
+	background-color: transparent;
+	color: #FFF;
+    width: 100%;
+}
+.modal-container.information .modal-body, .modal-container.confirmation .modal-body{
+	position: absolute;
+	top: 50%;    
+	transform: translateY(-50%); 
+    left: 0;
+	right: 0;
+}
+.modal-container.information h2{
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    line-height: 30px;
+    text-align: center;
+}
+/*LOGIN*/
+.modal-links:link, .modal-links:visited{
+    display: block;
+    position: relative;
+    color: #005d7a;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+}
+.modal-footer{
+	padding-top: 20px;
+}
+.modal-container.cart-management .modal-header legend{
+	font-size: 24px;
+}
+.close:hover, .close:focus{
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.modal-container input, .modal-container select{
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+}
+.modal-container input:hover, .modal-container select:hover{
+  opacity: 0.8;
+}
+.modal-container input[type=submit]:hover{
+	background-color: #005d7a; 
+    color: #FFF;
+}
+.modal-footer input[type=submit]{
+    width: 45%;
+    float: right;
+    margin-top: -20px;
+}
+/*LOGIN*/
+.modal-container.login{
+  height: 280px;
+}
